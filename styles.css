@@ -1,0 +1,145 @@
+/* styles.css */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: white;
+    margin: 0;
+    border-radius: 20px;
+    box-shadow: inset;
+}
+
+.card {
+    width: 300px;
+    height: 500px;
+    perspective: 1000px;
+}
+
+.card__front,
+.card__back {
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform 0.6s linear;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.card__front {
+    background: linear-gradient(to bottom, #002b5c, #004080);
+    color: #ffffff;
+    transform: rotateY(0deg);
+}
+div.card__front{
+    color: white;
+}
+.card__front #yellow{
+    color: #ff9900;
+    font-weight: bold;
+    font-size: 20px;
+}
+#blye{
+    color:white;
+}
+
+.card__back {
+    background: #ffffff;
+    color: #002b5c;
+    transform: rotateY(180deg);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.card__back #blue{
+    color:  #004080;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.card.is-flipped .card__front {
+    transform: rotateY(-180deg);
+}
+
+.card.is-flipped .card__back {
+    transform: rotateY(0deg);
+}
+
+.photo img, .qr img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 20px 0;
+}
+
+h2 {
+    margin: 10px 0;
+    font-size: 1.5em;
+}
+
+h3 {
+    margin: 5px 0;
+    font-size: 1.2em;
+    color: #ffffff;
+}
+
+p {
+    margin: 5px 0;
+}
+
+.card__front h3,
+.card__front p {
+    color: #ffffff;
+}
+
+.card__front .photo {
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card__front .qr {
+    margin-top: 20px;
+}
+
+.card__back h3 {
+    color: #002b5c;
+}
+
+.card__back p {
+    color: #000000;
+    margin: 5px 0;
+}
+
+.card__back p:first-of-type {
+    margin-top: 20px;
+}
+
+.card__back .issuing-authority {
+    margin: 20px 0;
+}
+
+.card__back .instructions {
+    margin-top: 20px;
+    color: #ff0000;
+}
+
+.card__front .tap-to-flip,
+.card__back .tap-to-flip {
+    margin-top: 20px;
+    color: #ff9900;
+    font-weight: bold;
+}
